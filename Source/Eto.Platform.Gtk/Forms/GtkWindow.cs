@@ -268,7 +268,7 @@ namespace Eto.Platform.GtkSharp
 				}
 			}
 
-			// do not connect before, otherwise it is sent before sending to child
+			[GLib.ConnectBefore]
 			public void HandleWindowKeyPressEvent(object o, Gtk.KeyPressEventArgs args)
 			{
 				var e = args.Event.ToEto();
